@@ -1,39 +1,24 @@
 const { Schema, model } = require('mongoose');
 
 const DataSchema = Schema({
-
-    idUser: {
-        type: String,
+    "Clave cliente": {
+        type: Number,
         required: [true, 'El id del usuario es obligatorio'],
     },
 
-    fecha: {
+    "Nombre Contacto": {
         type: String,
-        
     },
 
-
-    temperatura: {
+    "Correo": {
         type: String,
         required: [true, 'La temperatura es obligatoria']
     },
 
-    humedad: {
-        type: String,
+    "Teléfono Contacto": {
+        type: Number,
         required: [true, 'La humedad es obligatoria'],
     },
-
-    luxes: {
-        type: String,
-        required: [true, 'La cantidad de luxes es obligatoria'],
-    },
-
-    hora: {
-        type: String,
-        required: [true, 'La hora es obligatoria'],
-    }
 });
 
-
-
-module.exports = model('Data', DataSchema);
+module.exports = model('Datas', DataSchema);
